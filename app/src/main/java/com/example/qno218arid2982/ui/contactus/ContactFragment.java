@@ -16,23 +16,11 @@ import com.example.qno218arid2982.R;
 
 public class ContactFragment extends Fragment {
 
-    private ContactViewModel mViewModel;
-
-    public static ContactFragment newInstance() {
-        return new ContactFragment();
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.contact_fragment, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ContactViewModel.class);
-        // TODO: Use the ViewModel
     }
 
 }

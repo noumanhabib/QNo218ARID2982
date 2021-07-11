@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QNo218ARID2982">
+        <activity android:name=".BillDetail"></activity>
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".MainActivity"
+            android:label="Home"
+            android:theme="@style/Theme.QNo218ARID2982.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.QNo218ARID2982.NoActionBar">
             <intent-filter>

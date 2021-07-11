@@ -11,28 +11,22 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.qno218arid2982.R;
 
 public class AddBill extends Fragment {
 
-    private AddBillViewModel mViewModel;
-
-    public static AddBill newInstance() {
-        return new AddBill();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.add_bill_fragment, container, false);
+        View root = inflater.inflate(R.layout.add_bill_fragment, container, false);
+        Button saveBtn = root.findViewById(R.id.saveBtn);
+        saveBtn.setOnClickListener(this::saveBill);
+        return root;
     }
+    public void saveBill(View v){
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(AddBillViewModel.class);
-        // TODO: Use the ViewModel
     }
 
 }

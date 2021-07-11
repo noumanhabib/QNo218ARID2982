@@ -1,13 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ui.addbill.AddBill">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        >
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/add_bill_detail"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="310dp"
+            android:layout_height="482dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.615"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.689">
+
+            <EditText
+                android:id="@+id/editPersonName"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Customer Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editBillNumber"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Bill Number"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/editMeterNumber"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Meter Number"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/editAmount"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Pending amount"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editLastUnits"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:hint="Last Unit Count"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editCurrentUnits"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Current Unit"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Save Bill" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
